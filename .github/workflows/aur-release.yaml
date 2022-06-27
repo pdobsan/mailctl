@@ -1,7 +1,8 @@
-name: AUR release
+name: AUR
 
 on:
   workflow_dispatch:
+  push:
     branches: [aur]
 
 jobs:
