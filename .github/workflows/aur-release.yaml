@@ -55,14 +55,14 @@ jobs:
           ls -l
 
       - name: Release AUR package
-        uses: KSXGitHub/github-actions-deploy-aur@beeaa2c21fccb825b1514089c02f260001c697bd
+        uses: KSXGitHub/github-actions-deploy-aur@v2.3.0
         with:
           pkgname: mailctl-bin
-          pkgbuild: ./PKGBUILD
+          pkgbuild: PKGBUILD
           assets: |
-            ./aur/.INSTALL
+            aur/.INSTALL
           commit_username: ${{ secrets.AUR_USERNAME }}
           commit_email: ${{ secrets.AUR_EMAIL }}
           ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
-          commit_message: ${{ env.package_version }}
+          commit_message: release mailctl-bin ${{ env.package_version }}
 
