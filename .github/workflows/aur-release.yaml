@@ -54,7 +54,7 @@ jobs:
           ls -l
 
       - name: Release AUR package
-        uses: KSXGitHub/github-actions-deploy-aur@v2.2.5
+        uses: KSXGitHub/github-actions-deploy-aur@beeaa2c21fccb825b1514089c02f260001c697bd
         with:
           pkgname: mailctl-bin
           pkgbuild: ./aur/PKGBUILD
